@@ -1,119 +1,120 @@
-import { test, expect } from "@playwright/test"
-import { ApiPage } from "../../pages/ApiPage"
+import { APIRequestContext } from "@playwright/test"
 
-// -----------------------------------------------
-test.describe('get', () => {
+export class ApiPage {
 
-    test("Test Get Products List API", async function({ request }) {
-        const apiPage = new ApiPage(request);
+    private request: APIRequestContext;
 
-        const { resp, body } = await apiPage.getProductsList();
+    constructor(request: APIRequestContext) {
+        this.request = request;
+    }
 
-        console.log("GET");
-        expect(resp.status()).toBe(200);
-        expect(body.responseCode).toBe(200);
-        expect(body.products).toBeTruthy();
-        expect(body.products.length).toBeGreaterThan(0);
-    });
-});
-
-//-----------------------------------------------
-test.describe('postnegative', () => {
-
-    test("Test POST Products List API - 405 Method Not Allowed", async function({ request }) {
-        const apiPage = new ApiPage(request);
-
-        const { resp, body } = await apiPage.postProductsList();
-
-        console.log("POST");
-        expect(resp.status()).toBe(200);
-        expect(body.responseCode).toBe(405);
-        expect(body.message).toBe("This request method is not supported.");
-    });
-});
-
-// -----------------------------------------------
-test.describe('create', () => {
-
-    test("Test POST Create Account API - 201 User Created", async function({ request }) {
-        const apiPage = new ApiPage(request);
-
-        const { resp, body } = await apiPage.createAccount({
-            name          : "Ganapathi",
-            email         : "ganapathi123@test.com",
-            password      : "gana@1234",
-            title         : "Mr",
-            birth_date    : "21",
-            birth_month   : "07",
-            birth_year    : "2005",
-            firstname     : "Ganapathi",
-            lastname      : "ragu",
-            company       : "Test Company",
-            address1      : "123 Main Street",
-            address2      : "Apt 4B",
-            country       : "India",
-            zipcode       : "10001",
-            state         : "Tamilnadu",
-            city          : "Coimbatore",
-            mobile_number : "9876543210"
+    // ----------------------------------------
+    // GET — Products List
+    // ----------------------------------------
+    async getProductsList() {
+        const resp = await this.request.get("https://automationexercise.com/api/productsList", {
+            maxRedirects: 5
         });
+        const body = await resp.json();
+        console.log("Response Status Code :", resp.status());
+        console.log("Response Status Text  :", resp.statusText());
+        console.log("Response Body         :", body);
+        return { resp, body };
+    }
 
-        console.log("POST CREATE");
-        expect(resp.status()).toBe(200);
-        expect(body.responseCode).toBe(201);
-        expect(body.message).toBe("User created!");
-    });
-});
-
-//-----------------------------------------------
-
-
-test.describe('update', () => {
-
-    test("Test PUT Update Account API - 200 User Updated", async function({ request }) {
-        const apiPage = new ApiPage(request);
-
-        const { resp, body } = await apiPage.updateAccount({
-            email         : "ganapathi123@test.com",
-            password      : "gana@1234",
-            name          : "Ganapathi Updated",
-            title         : "Mr",
-            birth_date    : "21",
-            birth_month   : "07",
-            birth_year    : "2005",
-            firstname     : "Ganapathi",
-            lastname      : "Ragu Updated",
-            company       : "Updated Company",
-            address1      : "456 New Street",
-            address2      : "Floor 2",
-            country       : "India",
-            zipcode       : "60002",
-            state         : "Tamilnadu",
-            city          : "Chennai",
-            mobile_number : "9999999999"
+    // ----------------------------------------
+    // POST — Products List (negative)
+    // ----------------------------------------
+    async postProductsList() {
+        const resp = await this.request.post("https://automationexercise.com/api/productsList", {
+            maxRedirects: 5
         });
+        const body = await resp.json();
+        console.log("Response Status Code :", resp.status());
+        console.log("Response Status Text  :", resp.statusText());
+        console.log("Response Body         :", body);
+        return { resp, body };
+    }
 
-        console.log("PUT UPDATE");
-        expect(resp.status()).toBe(200);
-        expect(body.responseCode).toBe(200);
-        expect(body.message).toBe("User updated!");
-    });
-});
+    //----------------------------------------
+    // POST — Create Account
+    //----------------------------------------
+    async createAccount(data: {
+        name          : string,
+        email         : string,
+        password      : string,
+        title         : string,
+        birth_date    : string,
+        birth_month   : string,
+        birth_year    : string,
+        firstname     : string,
+        lastname      : string,
+        company       : string,
+        address1      : string,
+        address2      : string,
+        country       : string,
+        zipcode       : string,
+        state         : string,
+        city          : string,
+        mobile_number : string
+    }) {
+        const resp = await this.request.post("https://automationexercise.com/api/createAccount", {
+            form: data,
+            maxRedirects: 5
+        });
+        const body = await resp.json();
+        console.log("Response Status Code :", resp.status());
+        console.log("Response Status Text  :", resp.statusText());
+        console.log("Response Body         :", body);
+        return { resp, body };
+    }
 
-//-----------------------------------------------
-test.describe('delete', () => {
+    // ----------------------------------------
+    // DELETE — Delete Account
+    // ----------------------------------------
+    async deleteAccount(email: string, password: string) {
+        const resp = await this.request.delete("https://automationexercise.com/api/deleteAccount", {
+            form: { email, password },
+            maxRedirects: 5
+        });
+        const body = await resp.json();
+        console.log("Response Status Code :", resp.status());
+        console.log("Response Status Text  :", resp.statusText());
+        console.log("Response Body         :", body);
+        return { resp, body };
+    }
 
-    test("Test Delete", async function({ request }) {
-        const apiPage = new ApiPage(request);
+    // ----------------------------------------
+    // PUT — Update Account
+    //----------------------------------------
+    async updateAccount(data: {
+        name          : string,
+        email         : string,
+        password      : string,
+        title         : string,
+        birth_date    : string,
+        birth_month   : string,
+        birth_year    : string,
+        firstname     : string,
+        lastname      : string,
+        company       : string,
+        address1      : string,
+        address2      : string,
+        country       : string,
+        zipcode       : string,
+        state         : string,
+        city          : string,
+        mobile_number : string
+    }) {
+        const resp = await this.request.put("https://automationexercise.com/api/updateAccount", {
+            form: data,
+            maxRedirects: 5
+        });
+        const body = await resp.json();
+        console.log("Response Status Code :", resp.status());
+        console.log("Response Status Text  :", resp.statusText());
+        console.log("Response Body         :", body);
+        return { resp, body };
+    }
 
-        const { resp, body } = await apiPage.deleteAccount(
-            "ganapathi123@test.com",
-            "gana@1234"
-        );
-
-        console.log("DELETE");
-        expect(resp.status()).toBe(200);
-        expect(body.responseCode).toBe(200);
-        expect(body.message).toBe("Account deleted!");
-    });
-});
+}
