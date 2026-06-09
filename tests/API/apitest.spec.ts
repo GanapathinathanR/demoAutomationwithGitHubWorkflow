@@ -8,7 +8,7 @@ export class ApiPage {
         this.request = request;
     }
 
-    // ----------------------------------------
+    // -------------------------------------
     // GET — Products List
     // ----------------------------------------
     async getProductsList() {
