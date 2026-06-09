@@ -65,10 +65,18 @@ async clickProducts(): Promise<void> {
   }
 
   /** Add first product to cart from home page using overlay button */
-  async addFirstProductToCart(): Promise<void> {
-   await this.page.getByRole('link', { name: 'Add to cart' }).first().click();
-    console.log(' First product added to cart from home page');
-  }
+  //  Fixed - hover first, then click overlay button
+async addFirstProductToCart(): Promise<void> {
+  // Wait for products to load
+  await this.page.locator('.productinfo').first().waitFor({ state: 'visible', timeout: 10_000 });
+  
+
+  await this.page.locator('.productinfo').first().hover();
+  
+  await this.page.locator('.productinfo a:has-text("Add to cart")').first().click();
+  
+  console.log('First product added to cart');
+}
 
   /** Click Continue Shopping in the modal */
   async clickContinueShopping(): Promise<void> {
