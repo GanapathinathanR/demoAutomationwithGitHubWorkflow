@@ -1,0 +1,43 @@
+{
+  "user": {
+    "name": "John Doe",
+    "email": "johndoe_auto1234@mailnull.com",
+    "password": "Test@1234",
+    "title": "Mr",
+    "dateOfBirth": {
+      "day": "15",
+      "month": "June",
+      "year": "1995"
+    },
+    "firstName": "Gana",
+    "lastName": "Ragu",
+    "company": "TestCorp",
+    "address1": "123 Main Street",
+    "address2": "Apt 4B",
+    "country": "India",
+    "state": "Tamilnadu",
+    "city": "Coimbatore",
+    "zipcode": "612605",
+    "mobileNumber": "9876567482"  
+  },
+
+  "review": {
+    "name": "Jane Reviewer",
+    "email": "jane_reviewer@mailnull.com",
+    "text": "Excellent product! Very high quality and fast delivery. Highly recommended."
+  },
+  "payment": {
+    "nameOnCard": "John Doe",
+    "cardNumber": "4111111111111111",
+    "cvc": "123",
+    "expiryMonth": "12",
+    "expiryYear": "2027"
+  },
+  "orderComment": "Please handle with care. Leave at the front door if no one is home.",
+  "urls": {
+    "home": "https://automationexercise.com/",
+    "login": "https://automationexercise.com/login",
+    "products": "https://automationexercise.com/products",
+    "cart": "https://automationexercise.com/view_cart"
+  }
+}
