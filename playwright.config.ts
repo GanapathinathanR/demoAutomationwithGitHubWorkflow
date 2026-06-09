@@ -9,14 +9,14 @@ export default defineConfig({
   retries: 1,
   workers: 1,
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'always' }],
+   ['html', { outputFolder: 'playwright-report', open: 'never' }],
     ['json', { outputFile: 'playwright-report/results.json' }],
     ['junit', { outputFile: 'playwright-report/results.xml' }],
     ['list'],
   ],
   use: {
     baseURL: 'https://automationexercise.com',
-    headless: true,
+     headless: process.env.CI ? true : false,
     viewport: { width: 1280, height: 720 },
     screenshot: 'on',
     video: 'retain-on-failure',
@@ -30,7 +30,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'], 
-        headless: false, 
+        headless: process.env.CI ? true : false,
       },
     },
   ],
