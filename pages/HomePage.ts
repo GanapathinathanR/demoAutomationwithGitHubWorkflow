@@ -64,7 +64,7 @@ async clickProducts(): Promise<void> {
     console.log(` Verified: Logged in as ${username}`);
   }
 
-  /** Add first product to cart from home page using overlay button */
+  
   //  Fixed - hover first, then click overlay button
 async addFirstProductToCart(): Promise<void> {
   // Wait for products to load
