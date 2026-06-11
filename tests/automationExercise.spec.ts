@@ -25,9 +25,9 @@ test.beforeAll(async () => {
   await home.verifyHomePageVisible();
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+// ─----------------------------------------------------------------------------
 // smoke1: Register User → Verify Account Created → Delete Account
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 test.describe('smoke1', {tag:['@sanity','@auth']},() => {
   test('Test 1: Register User', async ({ page }) => {
     const home     = new HomePage(page);
@@ -58,9 +58,9 @@ test.describe('smoke1', {tag:['@sanity','@auth']},() => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 // smoke2: Login User with Valid Credentials
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 test.describe('smoke2',{tag:['@sanity','@auth']}, () => {
   test('Test 2: Login User with Valid Credentials', async ({ page }) => {
     const home  = new HomePage(page);
@@ -78,9 +78,9 @@ test.describe('smoke2',{tag:['@sanity','@auth']}, () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 // smoke3: Login User with Incorrect Credentials
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 test.describe('smoke3', () => {
   test('Test 3: Login User with Invalid Credentials', {tag:['@sanity','@auth']},async ({ page }) => {
     const home  = new HomePage(page);
@@ -107,9 +107,9 @@ test.describe('smoke3', () => {
 });
 
 
-// ─────────────────────────────────────────────────────────────────────────────
+//  ---------------------------------------------------------------------------
 // smoke4: Add Products to Cart and Verify Details
-// ─────────────────────────────────────────────────────────────────────────────
+//  ─----------------------------------------------------------------------------
 test.describe('smoke4',{tag:['@sanity','@products']}, () => {
   test('Test 4: Add Two Products to Cart and Verify', async ({ page }) => {
     const home     = new HomePage(page);
@@ -133,9 +133,9 @@ test.describe('smoke4',{tag:['@sanity','@products']}, () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+//  ----------------------------------------------------------------------------
 // smoke5a: View Product Detail, Set Quantity to 4, Verify in Cart
-// ─────────────────────────────────────────────────────────────────────────────
+//  ----------------------------------------------------------------------------
 test.describe('smoke5a',{tag:['@sanity','@cart']}, () => {
   test('Test 5a: View Product Detail and Set Quantity to 4', async ({ page }) => {
     const home     = new HomePage(page);
@@ -156,9 +156,9 @@ test.describe('smoke5a',{tag:['@sanity','@cart']}, () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+//  ----------------------------------------------------------------------------
 // smoke5b: Add 5 Products → Print Names & Quantities to Console
-// ─────────────────────────────────────────────────────────────────────────────
+//  ----------------------------------------------------------------------------
 test.describe('smoke5b', () => {
   test('Test 5b: Add 5 Products and Print Cart Summary to Console',{tag:['@sanity','@cart']}, async ({ page }) => {
     const home     = new HomePage(page);
@@ -185,9 +185,9 @@ test.describe('smoke5b', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+// ----------------------------------------------------------------------------
 // smoke6: Add Review for Product
-// ─────────────────────────────────────────────────────────────────────────────
+// ----------------------------------------------------------------------------
 test.describe('smoke6', {tag:['@sanity','@products']},() => {
   test('Test 6: Write Product Review', async ({ page }) => {
     const home     = new HomePage(page);
@@ -213,9 +213,9 @@ test.describe('smoke6', {tag:['@sanity','@products']},() => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
+// ----------------------------------------------------------------------------
 // smoke7: Place Order — Register while Checkout
-// ─────────────────────────────────────────────────────────────────────────────
+// ----------------------------------------------------------------------------
 test.describe('smoke7',{tag:['@sanity','@checkout']}, () => {
   test('Test 7: Place Order - Register While Checkout', async ({ page }) => {
     const home     = new HomePage(page);
@@ -272,13 +272,13 @@ test.describe('smoke7',{tag:['@sanity','@checkout']}, () => {
 test.describe('smoke8', () => {
   test('Test 8: Contact Us page', {tag:['@sanity','@contact']},async ({ page }) => {
 
-    // ─── Home Page ──────────────────────────────────────────────
+    // ----------Home Page --------------------
     const home = new HomePage(page);
     
     // await home.goto();
     // await home.verifyHomePageVisible();
 
-    // ─── Contact Us Page ────────────────────────────────────────
+    // ------ Contact Us Page ------------------------------------
     const contact = new ContactUsPage(page);
 
     await contact.clickContactUs();
