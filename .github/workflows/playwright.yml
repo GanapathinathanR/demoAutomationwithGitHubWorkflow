@@ -32,7 +32,7 @@ jobs:
 
       - name: Run UI Tests
         env:
-          CI: true        # ✅ this tells config to use headless: true
+          CI: true       
         run: npx playwright test ./tests/automationExercise.spec.ts
 
       - name: Upload HTML Report
