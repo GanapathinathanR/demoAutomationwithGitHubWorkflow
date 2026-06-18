@@ -17,8 +17,8 @@ import { readExcelData } from '../utils/excelReader';
 const excelData = readExcelData();
 test.beforeAll(async () => {
     
-    console.log("----------------Test Suite Running--------------------");
-  });``
+    console.log("----------------Test Suite Running------------------");
+  });
    test.beforeEach(async ({ page }) => {
   const home = new HomePage(page);
   await home.goto();                  // ← goto() MUST be here
