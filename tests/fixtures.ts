@@ -15,7 +15,7 @@ export const test = base.extend({
       try {
         const pathname = new URL(url).pathname;
         const screenshot = await page.screenshot({ fullPage: true });
-        await testInfo.attach(`📸 Step ${navCount} — ${pathname}`, {
+        await testInfo.attach(` Step ${navCount} — ${pathname}`, {
           body: screenshot,
           contentType: 'image/png',
         });
@@ -29,7 +29,7 @@ export const test = base.extend({
     // Final screenshot at end of every test (pass or fail)
     try {
       const screenshot = await page.screenshot({ fullPage: true });
-      await testInfo.attach(`🏁 Final — ${testInfo.title}`, {
+      await testInfo.attach(` Final — ${testInfo.title}`, {
         body: screenshot,
         contentType: 'image/png',
       });
