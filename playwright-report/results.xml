@@ -1,13 +1,302 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="21.777995">
-<testsuite name="automationExercise.spec.ts" timestamp="2026-06-09T12:10:15.687Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.599" errors="0">
-<testcase name="smoke1 › Test 1: Register User" classname="automationExercise.spec.ts" time="14.599">
+<testsuites id="" name="" tests="14" failures="0" skipped="0" errors="0" time="150.333848">
+<testsuite name="API\apitest.spec.ts" timestamp="2026-07-15T10:37:22.716Z" hostname="chromium" tests="5" failures="0" skipped="0" time="4.306" errors="0">
+<testcase name="get › Test Get Products List API" classname="API\apitest.spec.ts" time="2.382">
+<system-out>
+<![CDATA[Response Status Code : [33m200[39m
+Response Status Text  : OK
+Response Body         : {
+  responseCode: [33m200[39m,
+  products: [
+    {
+      id: [33m1[39m,
+      name: [32m'Blue Top'[39m,
+      price: [32m'Rs. 500'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m2[39m,
+      name: [32m'Men Tshirt'[39m,
+      price: [32m'Rs. 400'[39m,
+      brand: [32m'H&M'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m3[39m,
+      name: [32m'Sleeveless Dress'[39m,
+      price: [32m'Rs. 1000'[39m,
+      brand: [32m'Madame'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m4[39m,
+      name: [32m'Stylish Dress'[39m,
+      price: [32m'Rs. 1500'[39m,
+      brand: [32m'Madame'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m5[39m,
+      name: [32m'Winter Top'[39m,
+      price: [32m'Rs. 600'[39m,
+      brand: [32m'Mast & Harbour'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m6[39m,
+      name: [32m'Summer White Top'[39m,
+      price: [32m'Rs. 400'[39m,
+      brand: [32m'H&M'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m7[39m,
+      name: [32m'Madame Top For Women'[39m,
+      price: [32m'Rs. 1000'[39m,
+      brand: [32m'Madame'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m8[39m,
+      name: [32m'Fancy Green Top'[39m,
+      price: [32m'Rs. 700'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m11[39m,
+      name: [32m'Sleeves Printed Top - White'[39m,
+      price: [32m'Rs. 499'[39m,
+      brand: [32m'Babyhug'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m12[39m,
+      name: [32m'Half Sleeves Top Schiffli Detailing - Pink'[39m,
+      price: [32m'Rs. 359'[39m,
+      brand: [32m'Babyhug'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m13[39m,
+      name: [32m'Frozen Tops For Kids'[39m,
+      price: [32m'Rs. 278'[39m,
+      brand: [32m'Allen Solly Junior'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m14[39m,
+      name: [32m'Full Sleeves Top Cherry - Pink'[39m,
+      price: [32m'Rs. 679'[39m,
+      brand: [32m'Kookie Kids'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m15[39m,
+      name: [32m'Printed Off Shoulder Top - White'[39m,
+      price: [32m'Rs. 315'[39m,
+      brand: [32m'Babyhug'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m16[39m,
+      name: [32m'Sleeves Top and Short - Blue & Pink'[39m,
+      price: [32m'Rs. 478'[39m,
+      brand: [32m'Babyhug'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m18[39m,
+      name: [32m'Little Girls Mr. Panda Shirt'[39m,
+      price: [32m'Rs. 1200'[39m,
+      brand: [32m'Kookie Kids'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m19[39m,
+      name: [32m'Sleeveless Unicorn Patch Gown - Pink'[39m,
+      price: [32m'Rs. 1050'[39m,
+      brand: [32m'Allen Solly Junior'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m20[39m,
+      name: [32m'Cotton Mull Embroidered Dress'[39m,
+      price: [32m'Rs. 1190'[39m,
+      brand: [32m'Kookie Kids'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m21[39m,
+      name: [32m'Blue Cotton Indie Mickey Dress'[39m,
+      price: [32m'Rs. 1530'[39m,
+      brand: [32m'Biba'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m22[39m,
+      name: [32m'Long Maxi Tulle Fancy Dress Up Outfits -Pink'[39m,
+      price: [32m'Rs. 1600'[39m,
+      brand: [32m'Biba'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m23[39m,
+      name: [32m'Sleeveless Unicorn Print Fit & Flare Net Dress - Multi'[39m,
+      price: [32m'Rs. 1100'[39m,
+      brand: [32m'Biba'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m24[39m,
+      name: [32m'Colour Blocked Shirt – Sky Blue'[39m,
+      price: [32m'Rs. 849'[39m,
+      brand: [32m'Allen Solly Junior'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m28[39m,
+      name: [32m'Pure Cotton V-Neck T-Shirt'[39m,
+      price: [32m'Rs. 1299'[39m,
+      brand: [32m'H&M'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m29[39m,
+      name: [32m'Green Side Placket Detail T-Shirt'[39m,
+      price: [32m'Rs. 1000'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m30[39m,
+      name: [32m'Premium Polo T-Shirts'[39m,
+      price: [32m'Rs. 1500'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m31[39m,
+      name: [32m'Pure Cotton Neon Green Tshirt'[39m,
+      price: [32m'Rs. 850'[39m,
+      brand: [32m'H&M'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m33[39m,
+      name: [32m'Soft Stretch Jeans'[39m,
+      price: [32m'Rs. 799'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m35[39m,
+      name: [32m'Regular Fit Straight Jeans'[39m,
+      price: [32m'Rs. 1200'[39m,
+      brand: [32m'H&M'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m37[39m,
+      name: [32m'Grunt Blue Slim Fit Jeans'[39m,
+      price: [32m'Rs. 1400'[39m,
+      brand: [32m'Polo'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m38[39m,
+      name: [32m'Rose Pink Embroidered Maxi Dress'[39m,
+      price: [32m'Rs. 2300'[39m,
+      brand: [32m'Madame'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m39[39m,
+      name: [32m'Cotton Silk Hand Block Print Saree'[39m,
+      price: [32m'Rs. 3000'[39m,
+      brand: [32m'Biba'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m40[39m,
+      name: [32m'Rust Red Linen Saree'[39m,
+      price: [32m'Rs. 3500'[39m,
+      brand: [32m'Biba'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m41[39m,
+      name: [32m'Beautiful Peacock Blue Cotton Linen Saree'[39m,
+      price: [32m'Rs. 5000'[39m,
+      brand: [32m'Madame'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m42[39m,
+      name: [32m'Lace Top For Women'[39m,
+      price: [32m'Rs. 1400'[39m,
+      brand: [32m'Mast & Harbour'[39m,
+      category: [36m[Object][39m
+    },
+    {
+      id: [33m43[39m,
+      name: [32m'GRAPHIC DESIGN MEN T SHIRT - BLUE'[39m,
+      price: [32m'Rs. 1389'[39m,
+      brand: [32m'Mast & Harbour'[39m,
+      category: [36m[Object][39m
+    }
+  ]
+}
+GET
+]]>
+</system-out>
+</testcase>
+<testcase name="postnegative › Test POST Products List API - 405 Method Not Allowed" classname="API\apitest.spec.ts" time="0.369">
+<system-out>
+<![CDATA[Response Status Code : [33m200[39m
+Response Status Text  : OK
+Response Body         : { responseCode: [33m405[39m, message: [32m'This request method is not supported.'[39m }
+POST
+]]>
+</system-out>
+</testcase>
+<testcase name="create › Test POST Create Account API - 201 User Created" classname="API\apitest.spec.ts" time="0.381">
+<system-out>
+<![CDATA[Response Status Code : [33m200[39m
+Response Status Text  : OK
+Response Body         : { responseCode: [33m201[39m, message: [32m'User created!'[39m }
+POST CREATE
+]]>
+</system-out>
+</testcase>
+<testcase name="update › Test PUT Update Account API - 200 User Updated" classname="API\apitest.spec.ts" time="0.459">
+<system-out>
+<![CDATA[Response Status Code : [33m200[39m
+Response Status Text  : OK
+Response Body         : { responseCode: [33m200[39m, message: [32m'User updated!'[39m }
+PUT UPDATE
+]]>
+</system-out>
+</testcase>
+<testcase name="delete › Test Delete" classname="API\apitest.spec.ts" time="0.715">
+<system-out>
+<![CDATA[Response Status Code : [33m200[39m
+Response Status Text  : OK
+Response Body         : { responseCode: [33m200[39m, message: [32m'Account deleted!'[39m }
+DELETE
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="automationExercise.spec.ts" timestamp="2026-07-15T10:37:22.716Z" hostname="chromium" tests="9" failures="0" skipped="0" time="140.675" errors="0">
+<testcase name="smoke1 › Test 1: Register User" classname="automationExercise.spec.ts" time="19.049">
 <system-out>
 <![CDATA[----------------Test Suite Running--------------------
  Navigated to automationexercise.com
  Home page is visible
  Clicked Signup / Login
  "New User Signup!" is visible
- Entered signup name: John Doe, email: johndoe_1781007029540@mailnull.com
+ Entered signup name: John Doe, email: johndoe_1784111863188@mailnull.com
  Clicked Signup button
  "ENTER ACCOUNT INFORMATION" is visible
  Newsletter and special offers checkboxes selected
@@ -21,6 +310,190 @@
  Clicked Continue after deletion
 
 [[ATTACHMENT|..\test-results\automationExercise-smoke1-Test-1-Register-User-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke2 › Test 2: Login User with Valid Credentials" classname="automationExercise.spec.ts" time="18.232">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+ Clicked Signup / Login
+ "Login to your account" is visible
+ Entered login email: guna123@gmail.com
+ Clicked Login button
+ Verified: Logged in as John Doe
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke2--4d3f7-User-with-Valid-Credentials-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke3 › Test 3: Login User with Invalid Credentials" classname="automationExercise.spec.ts" time="11.781">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+ Clicked Signup / Login
+ "Login to your account" is visible
+ Entered login email: wronguserda@fake.com
+ Clicked Login button
+ Error "Your email or password is incorrect!" is visible
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke3--ccd92-er-with-Invalid-Credentials-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke4 › Test 4: Add Two Products to Cart and Verify" classname="automationExercise.spec.ts" time="11.745">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+Clicked Products
+ ALL PRODUCTS page is visible
+ Hovered and added product 1 to cart
+ Clicked Continue Shopping
+ Hovered and added product 2 to cart
+ Clicked View Cart
+ Cart has 2 product(s)
+  Product 1 → Price: Rs. 500  Qty: 1  Total: Rs. 500
+  Product 2 → Price: Rs. 400  Qty: 1  Total: Rs. 400
+ Prices, quantities and totals verified
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke4--67a35-Products-to-Cart-and-Verify-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke5a › Test 5a: View Product Detail and Set Quantity to 4" classname="automationExercise.spec.ts" time="12.119">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+ Clicked View Product 1
+ Product detail page opened: Blue Top
+ Quantity set to 4
+ Clicked Add to cart on detail page
+ Clicked View Cart
+ Cart item quantity is 4
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke5a-10a3d-etail-and-Set-Quantity-to-4-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke5b › Test 5b: Add 5 Products and Print Cart Summary to Console" classname="automationExercise.spec.ts" time="19.058">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+Clicked Products
+ ALL PRODUCTS page is visible
+   Added product 1 of 5
+   Added product 2 of 5
+   Added product 3 of 5
+   Added product 4 of 5
+   Added product 5 of 5
+ Cart page is displayed
+
+ ═══════════════ CART SUMMARY ═══════════════
+   Total unique products: 5
+
+   Product 1:
+     Name     : Blue Top
+     Quantity : 1
+     Price    : Rs. 500
+     Total    : Rs. 500
+
+   Product 2:
+     Name     : Men Tshirt
+     Quantity : 1
+     Price    : Rs. 400
+     Total    : Rs. 400
+
+   Product 3:
+     Name     : Sleeveless Dress
+     Quantity : 1
+     Price    : Rs. 1000
+     Total    : Rs. 1000
+
+   Product 4:
+     Name     : Stylish Dress
+     Quantity : 1
+     Price    : Rs. 1500
+     Total    : Rs. 1500
+
+   Product 5:
+     Name     : Winter Top
+     Quantity : 1
+     Price    : Rs. 600
+     Total    : Rs. 600
+
+   Grand total items: 5
+═══════════════════════════════════════════════
+
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke5b-8f453-int-Cart-Summary-to-Console-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke6 › Test 6: Write Product Review" classname="automationExercise.spec.ts" time="8.568">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+Clicked Products
+ ALL PRODUCTS page is visible
+ Clicked View Product 1
+ "Write Your Review" is visible
+ Review filled for: Jane Reviewer
+ Clicked Submit review
+ "Thank you for your review." message is visible
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke6-Test-6-Write-Product-Review-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke7 › Test 7: Place Order - Register While Checkout" classname="automationExercise.spec.ts" time="22.149">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+First product added to cart
+ Clicked Continue Shopping
+ Clicked Cart
+ Cart page is displayed
+ Clicked Proceed To Checkout
+ Clicked Register / Login from checkout
+ "New User Signup!" is visible
+ Entered signup name: John Doe, email: johndoe_t7_1784111956887@mailnull.com
+ Clicked Signup button
+ "ENTER ACCOUNT INFORMATION" is visible
+ Newsletter and special offers checkboxes selected
+ Address details filled
+ Clicked Create Account
+ "Account Created!" is visible
+ Clicked Continue
+ Verified: Logged in as John Doe
+ Clicked Cart
+ Clicked Proceed To Checkout
+ Address Details and Review Your Order sections are visible
+ Comment entered and Place Order clicked
+ Payment details filled
+ Clicked Pay and Confirm Order
+ Order placed successfully!
+ Clicked Delete Account
+ "Account Deleted!" is visible
+ Clicked Continue after deletion
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke7--350d5-r---Register-While-Checkout-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="smoke8 › Test 8: Contact Us page" classname="automationExercise.spec.ts" time="17.974">
+<system-out>
+<![CDATA[ Navigated to automationexercise.com
+ Home page is visible
+ Clicked Contact Us
+ Contact Us page is visible
+ Entered name: Sample Name
+ Entered email: sample@mail.com
+ Entered subject: Test Subject
+ Entered message: This is a sample message for testing purposes.
+ Clicked Submit
+ Success message displayed
+
+[[ATTACHMENT|..\test-results\automationExercise-smoke8-Test-8-Contact-Us-page-chromium\test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>
