@@ -133,9 +133,9 @@ test.describe('smoke4',{tag:['@sanity','@products']}, () => {
   });
 });
 
-//  ----------------------------------------------------------------------------
+//  --------------------------------------------------------------------------
 // smoke5a: View Product Detail, Set Quantity to 4, Verify in Cart....
-//  ----------------------------------------------------------------------------
+//  --------------------------------------------------------------------------
 test.describe('smoke5a',{tag:['@sanity','@cart']}, () => {
   test('Test 5a: View Product Detail and Set Quantity to 4', async ({ page }) => {
     const home     = new HomePage(page);
